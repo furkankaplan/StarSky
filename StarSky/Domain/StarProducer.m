@@ -17,13 +17,14 @@ NSArray *brightness = nil;
 {
     self = [super init];
     if (self) {
+        dataSource = [[NSMutableArray alloc] init];
         colors = [[NSArray alloc] initWithObjects:UIColor.yellowColor,UIColor.purpleColor,UIColor.grayColor, nil];
-        brightness = [[NSArray alloc] initWithObjects:StarBrightnessBright,StarBrightnessBright, nil];
+        brightness = [[NSArray alloc] initWithObjects:StarBrightnessNotSoMuch,StarBrightnessBright, nil];
     }
     return self;
 }
 
-+ (void)addStarInterface:(StarSize)size {
+- (void)addStarInterface:(StarSize)size {
     StarModel *model = [[StarModel alloc] init];
     
     int colorRandomIndex = arc4random_uniform([colors count]);
@@ -42,11 +43,14 @@ NSArray *brightness = nil;
 }
 
 - (void)logDataSource {
-    NSLog(@"%@", dataSource);
+    NSLog(@"All DataSource is given below.");
+    NSLog(@"%@", [dataSource description]);
 }
 
 - (void)logBrightStars {
-    NSMutableArray *filteredArray = nil;
+    NSLog(@"All stars which are bright.");
+    
+    NSMutableArray *filteredArray = [[NSMutableArray alloc] init];
     
     for (StarModel *item in dataSource) {
         if (item.brightness == StarBrightnessBright) {
@@ -54,6 +58,6 @@ NSArray *brightness = nil;
         }
     }
     
-    NSLog(@"%@", filteredArray);
+    NSLog(@"%@", [filteredArray description]);
 }
 @end

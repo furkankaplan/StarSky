@@ -10,9 +10,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SkyViewController : UIViewController
-- (void)setup;
-- (void)configureWebView;
-- (void)configuraStarButtons;
++ (void)setup;
++ (void)configureWebView;
++ (void)configuraStarButtons;
 @end
 
 NS_ASSUME_NONNULL_END

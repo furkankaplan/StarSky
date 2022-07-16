@@ -10,8 +10,8 @@
 
 @interface StarProducer : NSObject
 
-+ (void)addStarInterface:(StarSize)size;
-- (void)logDataSource;
-- (void)logBrightStars;
+- (void)addStarInterface:(StarSize)size;
++ (void)logDataSource;
++ (void)logBrightStars;
 
 @end

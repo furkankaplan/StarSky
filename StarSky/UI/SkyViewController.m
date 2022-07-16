@@ -6,6 +6,7 @@
 //
 
 #import "SkyViewController.h"
+#import "StarProducer.h"
 #import <WebKit/WebKit.h>
 
 @interface SkyViewController ()
@@ -16,6 +17,8 @@
 
 @implementation SkyViewController
 
+StarProducer *starProcuder = nil;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
         
@@ -23,9 +26,19 @@
 }
 
 - (void)setup {
+    starProcuder = [[StarProducer alloc] init];
+    
     [self configureScene];
     [self configureWebView];
     [self configuraStarButtons];
+}
+
+- (IBAction)smallButtonTapped:(id)sender {
+    [starProcuder addStarInterface:StarSizeSmall];
+}
+
+- (IBAction)bigButtonTapped:(id)sender {
+    [starProcuder addStarInterface:StarSizeBig];
 }
 
 // MARK: - UI Configuration Method
@@ -35,7 +48,7 @@
 }
 
 - (void)configureWebView {
-    NSURL *targetURL = [NSURL URLWithString:@"https://img.etimg.com/thumb/msid-72948091,width-650,imgsize-95069,,resizemode-4,qualit y-100/star_istock.jpg"];
+    NSURL *targetURL = [NSURL URLWithString:@"https://img.etimg.com/thumb/msid-72948091,width-650,imgsize-95069,,resizemode-4,quality-100/star_istock.jpg"];
     NSURLRequest *request = [NSURLRequest requestWithURL:targetURL];
     _skyWebView.opaque = NO;
     _skyWebView.backgroundColor = UIColor.clearColor;
