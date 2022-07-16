@@ -17,8 +17,6 @@
 
 @implementation SkyViewController
 
-StarProducer *starProcuder = nil;
-
 - (void)viewDidLoad {
     [super viewDidLoad];
         
@@ -26,19 +24,23 @@ StarProducer *starProcuder = nil;
 }
 
 - (void)setup {
-    starProcuder = [[StarProducer alloc] init];
+    _starProcuder = [[StarProducer alloc] init];
     
     [self configureScene];
     [self configureWebView];
     [self configuraStarButtons];
 }
 
+- (void)addStarInterface:(StarSize)size {
+    [_starProcuder addStarInterface:size];
+}
+
 - (IBAction)smallButtonTapped:(id)sender {
-    [starProcuder addStarInterface:StarSizeSmall];
+    [_starProcuder addStarInterface:StarSizeSmall];
 }
 
 - (IBAction)bigButtonTapped:(id)sender {
-    [starProcuder addStarInterface:StarSizeBig];
+    [_starProcuder addStarInterface:StarSizeBig];
 }
 
 // MARK: - UI Configuration Method
