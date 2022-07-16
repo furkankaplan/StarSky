@@ -11,6 +11,8 @@
 		B63F2BE52882A7CF005CB37E /* SkyViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B63F2BE22882A7CF005CB37E /* SkyViewController.h */; };
 		B63F2BE62882A7CF005CB37E /* SkyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B63F2BE32882A7CF005CB37E /* SkyViewController.m */; };
 		B63F2BE72882A7CF005CB37E /* SkyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B63F2BE42882A7CF005CB37E /* SkyViewController.xib */; };
+		B63F2CF12882BCD2005CB37E /* StarProducer.m in Sources */ = {isa = PBXBuildFile; fileRef = B63F2CEF2882BCD2005CB37E /* StarProducer.m */; };
+		B63F2CF22882BCD2005CB37E /* StarProducer.h in Headers */ = {isa = PBXBuildFile; fileRef = B63F2CF02882BCD2005CB37E /* StarProducer.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		B63F2BE22882A7CF005CB37E /* SkyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SkyViewController.h; sourceTree = "<group>"; };
 		B63F2BE32882A7CF005CB37E /* SkyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SkyViewController.m; sourceTree = "<group>"; };
 		B63F2BE42882A7CF005CB37E /* SkyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SkyViewController.xib; sourceTree = "<group>"; };
+		B63F2CEF2882BCD2005CB37E /* StarProducer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarProducer.m; sourceTree = "<group>"; };
+		B63F2CF02882BCD2005CB37E /* StarProducer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarProducer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,7 @@
 		B63F2BDA2882A53F005CB37E /* StarSky */ = {
 			isa = PBXGroup;
 			children = (
+				B63F2CEE2882BCD2005CB37E /* Domain */,
 				B63F2BE82882B414005CB37E /* UI */,
 				B63F2BDB2882A53F005CB37E /* StarSky.h */,
 			);
@@ -67,6 +72,15 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		B63F2CEE2882BCD2005CB37E /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				B63F2CEF2882BCD2005CB37E /* StarProducer.m */,
+				B63F2CF02882BCD2005CB37E /* StarProducer.h */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -76,6 +90,7 @@
 			files = (
 				B63F2BDC2882A53F005CB37E /* StarSky.h in Headers */,
 				B63F2BE52882A7CF005CB37E /* SkyViewController.h in Headers */,
+				B63F2CF22882BCD2005CB37E /* StarProducer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B63F2BE62882A7CF005CB37E /* SkyViewController.m in Sources */,
+				B63F2CF12882BCD2005CB37E /* StarProducer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
