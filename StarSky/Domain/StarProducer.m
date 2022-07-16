@@ -25,6 +25,12 @@ NSArray *brightness = nil;
 }
 
 - (void)addStarInterface:(StarSize)size {
+    __block StarProducer *blocksafeSelf = self;
+    
+    if ([blocksafeSelf isSkyFull]) {
+        return;
+    }
+    
     StarModel *model = [[StarModel alloc] init];
     
     int colorRandomIndex = arc4random_uniform([colors count]);
@@ -36,10 +42,18 @@ NSArray *brightness = nil;
     
     [dataSource addObject:model];
     
-    __block StarProducer *blocksafeSelf = self;
     
     [blocksafeSelf logDataSource];
     [blocksafeSelf logBrightStars];
+}
+
+- (BOOL)isSkyFull {
+    if (dataSource.count == 10) {
+        NSLog(@"Sky is full with 10 stars");
+        return true;
+    }
+    
+    return false;
 }
 
 - (void)logDataSource {

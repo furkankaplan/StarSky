@@ -11,6 +11,7 @@
 @interface StarProducer : NSObject
 
 - (void)addStarInterface:(StarSize)size;
++ (BOOL)isSkyFull;
 + (void)logDataSource;
 + (void)logBrightStars;
 
