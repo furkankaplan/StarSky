@@ -13,6 +13,7 @@
 		B63F2BE72882A7CF005CB37E /* SkyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B63F2BE42882A7CF005CB37E /* SkyViewController.xib */; };
 		B63F2CF12882BCD2005CB37E /* StarProducer.m in Sources */ = {isa = PBXBuildFile; fileRef = B63F2CEF2882BCD2005CB37E /* StarProducer.m */; };
 		B63F2CF22882BCD2005CB37E /* StarProducer.h in Headers */ = {isa = PBXBuildFile; fileRef = B63F2CF02882BCD2005CB37E /* StarProducer.h */; };
+		B63F2D102882C34B005CB37E /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63F2D0F2882C34B005CB37E /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		B63F2BE42882A7CF005CB37E /* SkyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SkyViewController.xib; sourceTree = "<group>"; };
 		B63F2CEF2882BCD2005CB37E /* StarProducer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarProducer.m; sourceTree = "<group>"; };
 		B63F2CF02882BCD2005CB37E /* StarProducer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarProducer.h; sourceTree = "<group>"; };
+		B63F2D0F2882C34B005CB37E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B63F2D102882C34B005CB37E /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +44,7 @@
 			children = (
 				B63F2BDA2882A53F005CB37E /* StarSky */,
 				B63F2BD92882A53F005CB37E /* Products */,
+				B63F2D0E2882C34B005CB37E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +83,14 @@
 				B63F2CF02882BCD2005CB37E /* StarProducer.h */,
 			);
 			path = Domain;
+			sourceTree = "<group>";
+		};
+		B63F2D0E2882C34B005CB37E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B63F2D0F2882C34B005CB37E /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
