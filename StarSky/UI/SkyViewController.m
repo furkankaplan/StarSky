@@ -37,7 +37,8 @@
 - (void)configureWebView {
     NSURL *targetURL = [NSURL URLWithString:@"https://img.etimg.com/thumb/msid-72948091,width-650,imgsize-95069,,resizemode-4,qualit y-100/star_istock.jpg"];
     NSURLRequest *request = [NSURLRequest requestWithURL:targetURL];
-    _skyWebView.backgroundColor = UIColor.blackColor;
+    _skyWebView.opaque = NO;
+    _skyWebView.backgroundColor = UIColor.clearColor;
     [_skyWebView loadRequest:request];
 }
 
@@ -45,10 +46,12 @@
     [_smallStarButton setTitle:@"Small Star" forState:UIControlStateNormal];
     [_smallStarButton setTitleColor:UIColor.redColor forState:UIControlStateNormal];
     _smallStarButton.backgroundColor = UIColor.whiteColor;
+    _smallStarButton.layer.cornerRadius = 6;
     
     [_bigStarButton setTitle:@"Big Star" forState: UIControlStateNormal];
     [_bigStarButton setTitleColor:UIColor.blueColor forState:UIControlStateNormal];
     _bigStarButton.backgroundColor = UIColor.whiteColor;
+    _bigStarButton.layer.cornerRadius = 6;
 }
 
 @end
