@@ -15,4 +15,6 @@
 @property UIColor* color;
 @property StarBrightness brightness;
 
+- (NSString *)hexStringFromColor:(UIColor *)color;
+
 @end
