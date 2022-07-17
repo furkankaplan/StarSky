@@ -1,6 +1,6 @@
 # StarSky
 
-It's a Objc-C framework providing simple usage of Objective-C Header and Implementation usage with clean project struce.
+It's a Objective-C framework providing simple usage of Objective-C Header and implementation with clean project structre.
 
 You can just present SkyViewController provided by the framework. If it is needed, you can add new stars with `addStarInterface:` method of SkyViewController instance.
 
